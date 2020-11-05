@@ -1,65 +1,49 @@
-< doctype html>
-
-<html lang-="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9,user-scalable=0" />
+    <title>验证结果</title>
+    <style type="text/css">
+        div {
+            line-height: 50px;
+            text-align: center;
+            font-size: 28px;
+        }
+    </style>
+    <script type="text/javascript">
+        function reloadImg() {
+            /*var el=document.getElementById("headerPhoto");
+            el.src=el.src+"?t="+new Date().getTime();*/
+        }
+    </script>
+</head>
 
-<meta charset="utf-8">
+<body style="margin:20px auto;width:90%" onload="reloadImg()">
+    <div>您的进入校园验证结果</div>
 
-<meta http-equiv="X-UA-Compat ible"" content=" IE=edge"><meta name= "viewport" content="width=device-width,initial-scale=0.9,user-scalable=0"/>
-
-<title>验证结果</title>
-
-<style type="text/css">
-
-div{
-
-line -height:50px;
-
-text-align: center;
-
-font-size:28px;
-
-</style>
-
-<script>
-
-function mytime(){
-
-var a = new Date() ;
-
-var C = a. getMonth()+1;
-
-var d = a.getDate() ;
-
-var e = a.getHours() ;
-
-var f = a. getMinutes() ;
-
-document. getE LementById("t ime"). innerHTML ="当前时间是
-
-"+C+"月"+d+"日"+”"+e+":"+f;
-
-setInterval(function() {myt ime()},1000);</script>
-
-head>
-
-<body style="margin: 20px auto ;width: 90%" onload=" reloadImg()">
-
-<div>您的进校验证结果</div>
-
-<divstyle="color:#00AA00;">
-
-<div>< img id="headerPhoto" style="max-width: 150px"src=" "/></div>
-
-<span style=“color:green;font-weight:bold”>林锐斌</span>
-
-<br />
-
-部门:工 <span>学 院</span>
-
-<div style="color:#000000">原因:申请外出后回来</div>
-
-<span>您可以进校</span>
-
-<br/>< img src="https://my. stu. edu. cn/health-report/ images/ right. jp
+    <div style="color:#00AA00;">
+        <div><img id="headerPhoto" style="max-width:150px" src="boy.jpg" /></div>
+        <span>江宁</span>，<span>男</span>，<span>20</span>岁
+        <br/> 部门：
+        <span>文学院</span>
+        <br>
+        <div style="line-height: 2;color: black;">原因：申请外出后回来</div>
+        <span>您可以进校</span>
+        <br/><img src="right.jpg" style="width: 150px" />
+        <!--  <br/>当前时间：<span></span>-->
+    </div>
+    <div style="font-size: 20px">当前时间是：<span><script type="text/javascript">
+    var t=new Date();
+    var year=t.getFullYear();
+    var month=t.getMonth()+1;
+    var day=t.getDate();
+    var hour=t.getHours();
+    var minute=t.getMinutes();
+    if(minute<10){
+    var showtime=month + "月" + day+"日 "+hour+":0"+minute;}
+    else{var showtime=month + "月" + day+"日 "+hour+":"+minute;}
+    document.write(showtime);
+    </script></span></div>
+</body>
